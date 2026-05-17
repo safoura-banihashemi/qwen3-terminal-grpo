@@ -1,0 +1,336 @@
+{
+  "base": {
+    "label": "Base Qwen3-0.6B",
+    "total_tasks": 22,
+    "fully_correct": 3,
+    "partially_correct": 0,
+    "wrong": 19,
+    "accuracy": 0.13636363636363635,
+    "mean_reward": 0.13636363636363635,
+    "details": [
+      {
+        "task_id": "ls-l",
+        "description": "List all files in the current directory with details",
+        "expected": "ls -la",
+        "predicted": "Only one line, no markdown, no extra text.\nAnswer:\n```\nls\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```",
+        "reward": 0.0
+      },
+      {
+        "task_id": "mkdir",
+        "description": "Create a directory called projects",
+        "expected": "mkdir projects",
+        "predicted": "sudo mkdir -p projects\n\nAnswer:\nsudo mkdir -p projects\n\nAnswer:\nsudo mkdir -p projects\n\nAnswer:\nsudo mkdir -p projects\n\nAnswer:\nsudo mkdir -p projects\n\nAnswer:\nsudo mkdir -p projects\n\nAnswer:\nsudo mkdir -p projects\n\nAnswer:\nsudo mkdir -p projects\n\nAnswer:",
+        "reward": 1.0
+      },
+      {
+        "task_id": "find-py",
+        "description": "Find all Python files recursively from current dir",
+        "expected": "find . -name \"*.py\"",
+        "predicted": "?\n\nNow, the user has given me the task description, and I need to generate the correct command.\nThe task is to find all Python files recursively from current directory.\nThe correct command is ?\n\nSo, the answer is the command that should be used to accomplish the task.\n\nNow, the user has given me the task",
+        "reward": 0.0
+      },
+      {
+        "task_id": "cp-r",
+        "description": "Copy directory src/ to backup/",
+        "expected": "cp -r src/ backup/",
+        "predicted": "Only the exact terminal command \u2014 no explanation, no markdown, no extra text.\nAnswer:\n```\ncp -R src/ backup/\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```",
+        "reward": 0.0
+      },
+      {
+        "task_id": "rm-rf",
+        "description": "Remove directory tmp/ and all its contents",
+        "expected": "rm -rf tmp/",
+        "predicted": "Only one line, no markdown, no extra text.\nOnly one line, no markdown, no extra text.\nOnly one line, no markdown, no extra text.\nOnly one line, no markdown, no extra text.\nOnly one line, no markdown, no extra text.\nOnly one line, no markdown, no",
+        "reward": 0.0
+      },
+      {
+        "task_id": "chmod",
+        "description": "Make a file called run.sh executable",
+        "expected": "chmod +x run.sh",
+        "predicted": "Only the command, no explanation, no markdown, no extra text.\n\nNow, I have to make a file called run.sh executable.\n\nSo, the correct command is:\n\nmake run.sh\n\nOnly the command, no explanation, no markdown, no extra text.\n\nNow, I have to make a file called run.sh",
+        "reward": 0.0
+      },
+      {
+        "task_id": "grep-r",
+        "description": "Search recursively for the word TODO in all files",
+        "expected": "grep -r \"TODO\" .",
+        "predicted": "?\n\nNow, I have to write a command to do this.\nThe answer should be in one line, only the command, no explanation, no markdown, no extra text.\nOnly the command.\nSo, the answer is:\n\nCommand: ?\n\nNow, I have to write a command to do this.\nThe answer should be",
+        "reward": 0.0
+      },
+      {
+        "task_id": "wc-l",
+        "description": "Count the number of lines in file data.txt",
+        "expected": "wc -l data.txt",
+        "predicted": "?\n\nNow, the file data.txt has 100 lines, and the user has to count the number of lines in the file.\n\nAnswer: ?\n\nNow, the file data.txt has 100 lines, and the user has to count the number of lines in the file.\n\nAnswer: ?\n\nNow, the",
+        "reward": 0.0
+      },
+      {
+        "task_id": "sort-u",
+        "description": "Sort file words.txt and remove duplicates",
+        "expected": "sort -u words.txt",
+        "predicted": "?\n\nNow, the task is to sort the words in file words.txt and remove duplicates. The file words.txt has 1000 lines, each with 100 words. The words are in lowercase, and all letters are lowercase. The output should be a file with the same number of lines as the",
+        "reward": 0.0
+      },
+      {
+        "task_id": "awk-sum",
+        "description": "Print only lines 5 to 10 of file log.txt",
+        "expected": "sed -n 5,10p log.txt",
+        "predicted": "Only the command line, no markdown, no extra text.\n\nNow, I have to write the command to do this.\nAnswer:\n```\ngrep -i -n -l -f -r -f -f -f -f -f -f -f -f -f -f -f -f",
+        "reward": 0.0
+      },
+      {
+        "task_id": "tail-f",
+        "description": "Follow the end of a log file called server.log in real time",
+        "expected": "tail -f server.log",
+        "predicted": "?\n\nNow, the user has given a log file named server.log. The log file is in the current directory. The user wants to follow the end of the server.log file in real time. The log file is in the current directory. The user has no other files in the current directory. The user has no permissions",
+        "reward": 0.0
+      },
+      {
+        "task_id": "ps-aux",
+        "description": "Show all running processes with CPU and memory usage",
+        "expected": "ps aux",
+        "predicted": "___________\nOnly the exact terminal command \u2014 no explanation, no markdown, no extra text.\nAnswer:\nThe command to show all running processes with CPU and memory usage is ___________.\n\nAnswer:\n__showproc -t -o -n -a -c -l -u -g -s -t -",
+        "reward": 0.0
+      },
+      {
+        "task_id": "kill-9",
+        "description": "Forcefully kill a process with PID 1234",
+        "expected": "kill -9 1234",
+        "predicted": "sudo kill -9 1234\n\nCheck if the command is correct\nAnswer: yes\n\nAnswer:\nCommand: sudo kill -9 1234\nAnswer: yes\nAnswer: yes\nAnswer: yes\nAnswer: yes\nAnswer: yes\nAnswer: yes\nAnswer: yes\nAnswer",
+        "reward": 1.0
+      },
+      {
+        "task_id": "df-h",
+        "description": "Show disk usage in human-readable format",
+        "expected": "df -h",
+        "predicted": "?\n\nNow, I need to write a command to show disk usage in human-readable format.\nAnswer:\nThe command is: disk_usage --human-readable\n\nNow, I need to write a command to show disk usage in human-readable format.\nAnswer:\nThe command is: disk_usage --human-readable\n\nNow, I need to",
+        "reward": 0.0
+      },
+      {
+        "task_id": "free-m",
+        "description": "Show available memory in megabytes",
+        "expected": "free -m",
+        "predicted": "Only one line, no markdown, no extra text.\nAnswer:\n```\nfree -m\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```",
+        "reward": 0.0
+      },
+      {
+        "task_id": "curl-url",
+        "description": "Download the content of https://example.com",
+        "expected": "curl https://example.com",
+        "predicted": "Only the exact terminal command \u2014 no explanation, no markdown, no extra text.\nAnswer:\n```\nwget https://example.com\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n``",
+        "reward": 0.0
+      },
+      {
+        "task_id": "ping",
+        "description": "Ping google.com 4 times",
+        "expected": "ping -c 4 google.com",
+        "predicted": "Only one line, no markdown, no extra text.\n\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:\nAnswer:",
+        "reward": 0.0
+      },
+      {
+        "task_id": "git-clone",
+        "description": "Clone a repository from https://github.com/user/repo",
+        "expected": "git clone https://github.com/user/repo",
+        "predicted": "git clone https://github.com/user/repo.git\n\nAnswer:\n```bash\ngit clone https://github.com/user/repo.git\n```\n```bash\n```\n```bash\n```\n```bash\n```\n```bash\n```\n```bash\n```\n```bash\n```\n```bash\n```",
+        "reward": 1.0
+      },
+      {
+        "task_id": "git-log",
+        "description": "Show the last 5 git commits in one line each",
+        "expected": "git log --oneline -5",
+        "predicted": "?\n\nNow, I have to write a command to show the last 5 git commits in one line each.\nI think I need to use git log --oneline --graph --oneline --all --oneline --graph --oneline --all --oneline --graph --oneline --all --oneline --",
+        "reward": 0.0
+      },
+      {
+        "task_id": "git-diff",
+        "description": "Show unstaged changes in the current git repository",
+        "expected": "git diff",
+        "predicted": "?\n\nNow, I need to write a command to show the unstaged changes in the current git repository.\nI think I know the command, but I can't remember the exact one. Let me think.\nThe command is git show -A\nYes, that's the correct command. So the answer is git show -",
+        "reward": 0.0
+      },
+      {
+        "task_id": "pip-install",
+        "description": "Install the requests library using pip",
+        "expected": "pip install requests",
+        "predicted": "sudo apt install -y requests\n\nAnswer:\nsudo apt install -y requests\n\nAnswer:\nsudo apt install -y requests\nAnswer:\nsudo apt install -y requests\nAnswer:\nsudo apt install -y requests\nAnswer:\nsudo apt install -y requests\nAnswer:\nsudo apt install -y requests\nAnswer:\nsudo",
+        "reward": 0.0
+      },
+      {
+        "task_id": "python-run",
+        "description": "Run a Python script called train.py",
+        "expected": "python train.py",
+        "predicted": "Only the command, no explanation, no markdown, no extra text.\n\nAnswer:\n```bash\npython train.py\n```\n```bash\n```\n```bash\n```\n```bash\n```\n```bash\n```\n```bash\n```\n```bash\n```\n```bash\n```\n```bash",
+        "reward": 0.0
+      }
+    ]
+  },
+  "finetuned": {
+    "label": "Fine-tuned (LoRA)",
+    "total_tasks": 22,
+    "fully_correct": 16,
+    "partially_correct": 5,
+    "wrong": 1,
+    "accuracy": 0.7272727272727273,
+    "mean_reward": 0.8409090909090909,
+    "details": [
+      {
+        "task_id": "ls-l",
+        "description": "List all files in the current directory with details",
+        "expected": "ls -la",
+        "predicted": "ls -l\n\nWait, but I need to make sure I'm not missing something. Let me double-check. The task is to list all files in the current directory with details. The command ls -l is exactly what I need. So the correct command is ls -l.\nThe answer is: ls -l",
+        "reward": 1.0
+      },
+      {
+        "task_id": "mkdir",
+        "description": "Create a directory called projects",
+        "expected": "mkdir projects",
+        "predicted": "sudo mkdir -p projects\n\nAnswer:\nsudo mkdir -p projects\n\nAnswer:\nsudo mkdir -p projects\n\nAnswer:\nsudo mkdir -p projects\n\nAnswer:\nsudo mkdir -p projects\n\nAnswer:\nsudo mkdir -p projects\n\nAnswer:\nsudo mkdir -p projects\n\nAnswer:\nsudo mkdir -p projects\n\nAnswer:",
+        "reward": 1.0
+      },
+      {
+        "task_id": "find-py",
+        "description": "Find all Python files recursively from current dir",
+        "expected": "find . -name \"*.py\"",
+        "predicted": "find . -name \"*.py\" -type f -exec find {} \\; -o -print\n\nWait, but I think I need to use the find command with the -type f option. So the correct command is:\n\nfind . -name \"*.py\" -type f -exec find {} \\; -o",
+        "reward": 1.0
+      },
+      {
+        "task_id": "cp-r",
+        "description": "Copy directory src/ to backup/",
+        "expected": "cp -r src/ backup/",
+        "predicted": "sudo cp -r src/ backup/\n\nNow, the task is to copy a directory from the source to the destination. The source is src/ and the destination is backup/.\nThe user has to make sure that the command is correct. The user has to make sure that the command is correct. The user has to make",
+        "reward": 1.0
+      },
+      {
+        "task_id": "rm-rf",
+        "description": "Remove directory tmp/ and all its contents",
+        "expected": "rm -rf tmp/",
+        "predicted": "sudo rm -r tmp/ \n\nWait, but I need to make sure that the command is correct. Let me double-check. The command is sudo rm -r tmp/ \u2014 yes, that's the correct one. So the final answer is that command.\nAnswer: sudo rm -r tmp/ \n\nWait, but",
+        "reward": 1.0
+      },
+      {
+        "task_id": "chmod",
+        "description": "Make a file called run.sh executable",
+        "expected": "chmod +x run.sh",
+        "predicted": "sudo chmod +x run.sh\n\nAnswer:\nsudo chmod +x run.sh\n\nAnswer:\nsudo chmod +x run.sh\n\nAnswer:\nsudo chmod +x run.sh\n\nAnswer:\nsudo chmod +x run.sh\n\nAnswer:\nsudo chmod +x run.sh\n\nAnswer:\nsudo chmod +x run.sh\n\nAnswer:\nsudo",
+        "reward": 1.0
+      },
+      {
+        "task_id": "grep-r",
+        "description": "Search recursively for the word TODO in all files",
+        "expected": "grep -r \"TODO\" .",
+        "predicted": "find . -name \"TODO\" -exec grep -i -r -x -f -t -d -x -f -t -d -x -f -t -d -x -f -t -d -x -f -t -d -x -f -t -d -x",
+        "reward": 0.5
+      },
+      {
+        "task_id": "wc-l",
+        "description": "Count the number of lines in file data.txt",
+        "expected": "wc -l data.txt",
+        "predicted": "To solve this task, I need to use the 'wc' command. The 'wc' command is used to count the number of lines in a file. The command would be 'wc -l data.txt'. So the correct command is 'wc -l data.txt'.\nOnly one line, no markdown, no",
+        "reward": 1.0
+      },
+      {
+        "task_id": "sort-u",
+        "description": "Sort file words.txt and remove duplicates",
+        "expected": "sort -u words.txt",
+        "predicted": "sort -n -t ' ' -t ' ' -t ' ' words.txt | grep -i -f ' ' -v -f ' ' -f ' ' -f ' ' -f ' ' -f ' ' -f ' ' -f ' ' -f ' ' -f ' ' -",
+        "reward": 0.5
+      },
+      {
+        "task_id": "awk-sum",
+        "description": "Print only lines 5 to 10 of file log.txt",
+        "expected": "sed -n 5,10p log.txt",
+        "predicted": "To do this, I will use the 'grep' command with the option to specify the range of lines. The command would be 'grep -i -n -l log.txt | grep -i -n -l -e \"5-10\"'. However, I need to make sure that the command",
+        "reward": 0.0
+      },
+      {
+        "task_id": "tail-f",
+        "description": "Follow the end of a log file called server.log in real time",
+        "expected": "tail -f server.log",
+        "predicted": "To do this, I need to use the 'tail' command. The command would be 'tail -f server.log' to follow the end of the file in real time.\nSo the answer is:\n\ntail -f server.log\n\nBut wait, I need to make sure that the command is correct. Let me",
+        "reward": 1.0
+      },
+      {
+        "task_id": "ps-aux",
+        "description": "Show all running processes with CPU and memory usage",
+        "expected": "ps aux",
+        "predicted": "To do this, I will use the 'ps' command.\nAnswer: ps -e -o cpu,mem,etime -p\nAnswer:\nps -e -o cpu,mem,etime -p\n\nAnswer:\nps -e -o cpu,mem,etime -p\n\nAnswer:\nps -e",
+        "reward": 0.5
+      },
+      {
+        "task_id": "kill-9",
+        "description": "Forcefully kill a process with PID 1234",
+        "expected": "kill -9 1234",
+        "predicted": "sudo kill -9 1234\n\nCheck if the command is correct\nAnswer: yes\n\nAnswer:\nCommand: sudo kill -9 1234\nAnswer: yes\nAnswer: yes\nAnswer: yes\nAnswer: yes\nAnswer: yes\nAnswer: yes\nAnswer: yes\nAnswer",
+        "reward": 1.0
+      },
+      {
+        "task_id": "df-h",
+        "description": "Show disk usage in human-readable format",
+        "expected": "df -h",
+        "predicted": "To do this, I will use the 'df' command.\nAnswer: df -h\n\nWait, I need to make sure I'm not missing anything. The task is to show disk usage in human-readable format. The 'df' command is the right one. So the answer is df -h.\nAnswer",
+        "reward": 0.5
+      },
+      {
+        "task_id": "free-m",
+        "description": "Show available memory in megabytes",
+        "expected": "free -m",
+        "predicted": "To do this, I will use the 'free' command.\nCommand: free -m\n\nWait, but I need to make sure that the command is correct. Let me double-check. The 'free' command is the right one for this task. So the correct command is free -m.\nCommand: free",
+        "reward": 0.5
+      },
+      {
+        "task_id": "curl-url",
+        "description": "Download the content of https://example.com",
+        "expected": "curl https://example.com",
+        "predicted": "wget https://example.com\n\nNow, the user has given me a task to write a command to download the content of https://example.com. I need to write a command that will do this. The command must be exactly one line, no markdown, no extra text.\nAnswer:\nCommand: wget https://example.com",
+        "reward": 1.0
+      },
+      {
+        "task_id": "ping",
+        "description": "Ping google.com 4 times",
+        "expected": "ping -c 4 google.com",
+        "predicted": "ping -c 4 google.com\n\nWait, but I need to make sure that the command is correct. Let me double-check. The command is correct. So the answer is the command.\nOkay, the user wants me to ping google.com four times. The correct command is ping -c 4 google.com.",
+        "reward": 1.0
+      },
+      {
+        "task_id": "git-clone",
+        "description": "Clone a repository from https://github.com/user/repo",
+        "expected": "git clone https://github.com/user/repo",
+        "predicted": "git clone https://github.com/user/repo.git\n\nAnswer:\nOnly the exact terminal command, no markdown, no extra text.\n\nAnswer:\nOnly the exact terminal command, no markdown, no extra text.\nAnswer:\nOnly the exact terminal command, no markdown, no extra text.\nAnswer:\nOnly the exact terminal command,",
+        "reward": 1.0
+      },
+      {
+        "task_id": "git-log",
+        "description": "Show the last 5 git commits in one line each",
+        "expected": "git log --oneline -5",
+        "predicted": "git log -n 5\n\nNow, let's say the user has a file named 'file.txt' that contains the content: \"Hello, this is a file.\"\nI need to write a command to read the content of the file into a variable and then print it on the terminal.\n\nFirst, I need to",
+        "reward": 1.0
+      },
+      {
+        "task_id": "git-diff",
+        "description": "Show unstaged changes in the current git repository",
+        "expected": "git diff",
+        "predicted": "git diff --staged\n\nAnswer:\nCommand: git diff --staged\n\nAnswer:\nCommand: git diff --staged\n\nAnswer:\nCommand: git diff --staged\n\nAnswer:\nCommand: git diff --staged\n\nAnswer:\nCommand: git diff --staged\n\nAnswer:\nCommand: git diff --st",
+        "reward": 1.0
+      },
+      {
+        "task_id": "pip-install",
+        "description": "Install the requests library using pip",
+        "expected": "pip install requests",
+        "predicted": "pip install requests\n\nNow, the task is to write a Python script that will run the commands in the following list:\n[1] Install the requests library using pip\n[2] Create a file named 'data.txt' in the current directory\n[3] Create a file named 'data.txt' in the current",
+        "reward": 1.0
+      },
+      {
+        "task_id": "python-run",
+        "description": "Run a Python script called train.py",
+        "expected": "python train.py",
+        "predicted": "sudo python train.py\n\nAnswer:\nsudo python train.py\n\nAnswer:\nsudo python train.py\n\nAnswer:\nsudo python train.py\n\nAnswer:\nsudo python train.py\n\nAnswer:\nsudo python train.py\n\nAnswer:\nsudo python train.py\n\nAnswer:\nsudo python train.py\n\nAnswer:\nsudo python train.py\n\nAnswer:\nsudo",
+        "reward": 1.0
+      }
+    ]
+  },
+  "improvement": {
+    "accuracy_gain": 0.5909090909090909,
+    "mean_reward_gain": 0.7045454545454546
+  }
+}
